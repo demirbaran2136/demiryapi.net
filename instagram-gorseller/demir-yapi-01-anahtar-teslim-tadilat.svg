@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1080" viewBox="0 0 1080 1080">
+  <defs>
+    <linearGradient id="shade" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#101112" stop-opacity=".95"/>
+      <stop offset=".55" stop-color="#101112" stop-opacity=".58"/>
+      <stop offset="1" stop-color="#c79a3f" stop-opacity=".34"/>
+    </linearGradient>
+  </defs>
+  <rect width="1080" height="1080" fill="#101112"/>
+  <image href="../assets/detay-anahtar-teslim-tadilat.jpg" x="0" y="0" width="1080" height="1080" preserveAspectRatio="xMidYMid slice"/>
+  <rect width="1080" height="1080" fill="url(#shade)"/>
+  <rect x="62" y="62" width="956" height="956" fill="none" stroke="#d9b45f" stroke-width="4" opacity=".75"/>
+  <image href="../assets/demir-yapi-logo.jpeg" x="70" y="70" width="108" height="108" preserveAspectRatio="xMidYMid slice"/>
+  <text x="205" y="115" fill="#ffffff" font-family="Arial, sans-serif" font-size="34" font-weight="800">DEMİR YAPI</text>
+  <text x="205" y="155" fill="#d9b45f" font-family="Arial, sans-serif" font-size="20" font-weight="700">1988'den beri yapı çözümleri</text>
+  <text x="70" y="645" fill="#d9b45f" font-family="Arial, sans-serif" font-size="30" font-weight="900">ANAHTAR TESLİM</text>
+  <text x="70" y="735" fill="#ffffff" font-family="Arial, sans-serif" font-size="86" font-weight="900">TADİLAT</text>
+  <text x="70" y="795" fill="#ffffff" font-family="Arial, sans-serif" font-size="31" font-weight="600">Daire • Villa • Ofis • Mutfak • Banyo</text>
+  <rect x="70" y="860" width="350" height="78" rx="8" fill="#d9b45f"/>
+  <text x="112" y="910" fill="#101112" font-family="Arial, sans-serif" font-size="30" font-weight="900">Teklif Al</text>
+  <text x="70" y="990" fill="#ffffff" font-family="Arial, sans-serif" font-size="25" font-weight="700">demiryapi.net</text>
+</svg>
