@@ -1862,7 +1862,9 @@ h3 {
 
 
 /* Project portfolio grouped by service and work category */
+.project-services-list { display: block; min-width: 0; }
 .project-service-group { margin: 40px 0 56px; padding-top: 28px; border-top: 1px solid var(--line); scroll-margin-top: 24px; }
+.project-service-group { min-width: 0; width: 100%; }
 .project-service-heading { display: grid; grid-template-columns: 150px minmax(0, 1fr) auto; gap: 18px; align-items: center; margin-bottom: 20px; }
 .project-service-heading .eyebrow { margin: 0; }
 .project-service-heading h2 { margin: 0 0 8px; }
