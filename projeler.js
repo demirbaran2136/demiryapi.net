@@ -28,7 +28,7 @@
   filters.hidden = Boolean(active);
   filters.style.display = active ? "none" : "grid";
   filters.innerHTML = categories.map((category, index) =>
-    `<a class="project-service-tile${active === category.slug ? " active" : ""}" href="projelerimiz.html?hizmet=${encodeURIComponent(category.slug)}" target="_blank" rel="noopener"${active === category.slug ? ' aria-current="page"' : ""}>` +
+    `<a class="project-service-tile${active === category.slug ? " active" : ""}" href="projelerimiz.html?hizmet=${encodeURIComponent(category.slug)}"${active === category.slug ? ' aria-current="page"' : ""}>` +
       `<img src="${esc(category.image)}" alt="" loading="lazy"><span class="project-service-tile-shade"></span>` +
       `<span class="project-service-tile-copy"><span class="project-service-tile-number">HİZMET ${String(index + 1).padStart(2, "0")}</span><strong>${esc(category.title)}</strong><span>${esc(category.summary)}</span><span class="project-service-tile-action">Projeleri görüntüle →</span></span></a>`
   ).join("");
@@ -49,7 +49,7 @@
 
   count.textContent = selected
     ? `${visibleProjects.length} proje · ${selected.title}`
-    : `${categories.length} hizmet alanı · projeler yeni sekmede açılır`;
+    : `${categories.length} hizmet alanı · projeleri görüntülemek için bir kutu seçin`;
 
   list.innerHTML = shownCategories.map((category) => {
     const categoryProjects = visibleProjects.filter((project) => project.serviceSlug === category.slug);
