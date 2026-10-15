@@ -1,4 +1,8 @@
 User-agent: *
 Allow: /
+Disallow: /proje-yonetimi.html
+Disallow: /proje-yonetimi.js
+Disallow: /proje-yonetimi
+Disallow: /proje-yonetimi.html
 
 Sitemap: https://demiryapi.net/sitemap.xml

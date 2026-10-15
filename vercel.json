@@ -1,0 +1,17 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "rewrites": [
+    {
+      "source": "/proje-yonetimi.html",
+      "destination": "/api/proje-yonetimi?asset=page"
+    },
+    {
+      "source": "/proje-yonetimi.js",
+      "destination": "/api/proje-yonetimi?asset=script"
+    },
+    {
+      "source": "/proje-yonetimi",
+      "destination": "/api/proje-yonetimi?asset=page"
+    }
+  ]
+}
