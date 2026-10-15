@@ -88,12 +88,43 @@
   const esc = (value) => String(value || "").replace(/[&<>"']/g, (char) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" })[char]);
   const requested = new URLSearchParams(window.location.search).get("hizmet") || "";
   const active = categories.some((category) => category.slug === requested) ? requested : "";
+  const setMeta = (selector, attribute, value) => {
+    let element = document.querySelector(selector);
+    if (!element) {
+      element = document.createElement("meta");
+      const match = selector.match(/\[(name|property)=["']([^"']+)["']\]/);
+      if (match) element.setAttribute(match[1], match[2]);
+      document.head.appendChild(element);
+    }
+    element.setAttribute(attribute, value);
+  };
   filters.classList.add("project-service-tiles");
   filters.innerHTML = categories.map((category, index) => `<a class="project-service-tile${active === category.slug ? " active" : ""}" href="blog.html?hizmet=${encodeURIComponent(category.slug)}"${active === category.slug ? ' aria-current="page"' : ""}><img src="${esc(category.image)}" alt="" loading="lazy"><span class="project-service-tile-shade"></span><span class="project-service-tile-copy"><span class="project-service-tile-number">HİZMET ${String(index + 1).padStart(2, "0")}</span><strong>${esc(category.title)}</strong><span>${esc(category.summary)}</span><span class="project-service-tile-action">Rehber ve soruları görüntüle →</span></span></a>`).join("");
   const title = document.querySelector(".blog-services-section .section-heading h2");
   if (active) {
     const category = categories.find((item) => item.slug === active);
     const guide = guides[active];
+    const pageTitle = `${category.title} Rehberi ve Sık Sorulan Sorular | Demir Yapı`;
+    const pageDescription = `${category.title}: ${category.summary} Sık sorulan soruların yanıtlarını ve ilgili rehber yazılarını inceleyin.`;
+    const canonicalUrl = `https://demiryapi.net/blog.html?hizmet=${encodeURIComponent(active)}`;
+    document.title = pageTitle;
+    setMeta('meta[name="description"]', "content", pageDescription);
+    setMeta('meta[property="og:title"]', "content", pageTitle);
+    setMeta('meta[property="og:description"]', "content", pageDescription);
+    setMeta('meta[property="og:url"]', "content", canonicalUrl);
+    let canonical = document.querySelector('link[rel="canonical"]');
+    if (!canonical) {
+      canonical = document.createElement("link");
+      canonical.rel = "canonical";
+      document.head.appendChild(canonical);
+    }
+    canonical.href = canonicalUrl;
+    const hero = document.querySelector(".page-hero");
+    if (hero) {
+      hero.querySelector(".eyebrow").textContent = `${category.title} Rehberi`;
+      hero.querySelector("h1").textContent = `${category.title} Rehberi ve Sık Sorulan Sorular`;
+      hero.querySelector("p:last-child").textContent = category.summary;
+    }
     if (title) title.textContent = `${category.title} rehberi ve sık sorulan sorular`;
     filters.hidden = true;
     const articleCards = guide.articles.map((href) => {
