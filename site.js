@@ -58,12 +58,12 @@
     const bar = document.createElement("nav");
     bar.className = "mobile-contact-bar";
     bar.setAttribute("aria-label", "H\u0131zl\u0131 ileti\u015fim");
-    const mobileQuoteHref = isQuotePage ? "teklif-al.html" : quoteWhatsappUrl;
+    const mobileQuoteHref = isQuotePage ? "#quote-form" : quoteWhatsappUrl;
     const mobileQuoteTarget = isQuotePage ? "" : ' target="_blank" rel="noopener"';
     bar.innerHTML = `
       <a href="tel:+${phone}" data-track="phone_click" data-track-label="Mobil Alt Bar">Ara</a>
       <a href="https://wa.me/${phone}?text=Merhaba%20Demir%20Yap%C4%B1%2C%20bilgi%20almak%20istiyorum." target="_blank" rel="noopener" data-track="whatsapp_click" data-track-label="Mobil Alt Bar">WhatsApp</a>
-      <a href="${mobileQuoteHref}"${mobileQuoteTarget} data-track="quote_click" data-track-label="Mobil Alt Bar">Teklif Al</a>
+      <a href="${mobileQuoteHref}"${mobileQuoteTarget} data-track="quote_click" data-track-label="Mobil Alt Bar">${isQuotePage ? "Forma Git" : "Teklif Al"}</a>
     `;
     document.body.appendChild(bar);
   }

@@ -1859,3 +1859,21 @@ h3 {
 }
 
 
+
+
+/* Project portfolio grouped by service and work category */
+.project-service-group { margin: 40px 0 56px; padding-top: 28px; border-top: 1px solid var(--line); scroll-margin-top: 24px; }
+.project-service-heading { display: grid; grid-template-columns: 150px minmax(0, 1fr) auto; gap: 18px; align-items: center; margin-bottom: 20px; }
+.project-service-heading .eyebrow { margin: 0; }
+.project-service-heading h2 { margin: 0 0 8px; }
+.project-service-heading p:not(.eyebrow) { margin: 0; color: var(--muted); }
+.project-subcategory-nav { display: flex; flex-wrap: wrap; gap: 8px; margin: 0 0 22px; }
+.project-subcategory-nav a { padding: 8px 12px; border: 1px solid var(--line); border-radius: 999px; color: var(--ink); text-decoration: none; font-size: .9rem; }
+.project-subcategory-nav a:hover,
+.project-subcategory-nav a:focus-visible { background: var(--gold-soft); border-color: var(--gold); }
+.project-subcategory { margin: 24px 0 32px; scroll-margin-top: 20px; }
+.project-subcategory h3 { margin: 0 0 14px; font-size: 1.35rem; }
+@media (max-width: 760px) {
+  .project-service-heading { grid-template-columns: 1fr; gap: 10px; }
+  .project-service-heading .button { justify-self: start; }
+}

@@ -5,7 +5,8 @@ window.demirYapiProjectCategories = [
     "page": "projelerimiz.html?hizmet=insaat-muteahhitlik",
     "servicePage": "insaat-muteahhitlik.html",
     "image": "assets/detay-insaat-santiye.jpg",
-    "summary": "Konut, ticari yapı, kaba inşaat, ince işler ve anahtar teslim proje uygulamaları."
+    "summary": "Konut, ticari yapı, kaba inşaat, ince işler ve anahtar teslim proje uygulamaları.",
+    "subcategories": [{"slug":"santiye-hazirligi","title":"Şantiye ve saha hazırlığı"},{"slug":"dis-cephe","title":"Dış cephe ve ortak alan"}]
   },
   {
     "slug": "insaat-malzemeleri",
@@ -13,7 +14,8 @@ window.demirYapiProjectCategories = [
     "page": "projelerimiz.html?hizmet=insaat-malzemeleri",
     "servicePage": "insaat-malzemeleri.html",
     "image": "assets/detay-yapi-malzemeleri-depo.jpg",
-    "summary": "Çimento, alçı, boya, demir, seramik, izolasyon, hırdavat ve yapı kimyasalları tedariği."
+    "summary": "Çimento, alçı, boya, demir, seramik, izolasyon, hırdavat ve yapı kimyasalları tedariği.",
+    "subcategories": [{"slug":"proje-tedarik","title":"Proje bazlı malzeme tedariği"},{"slug":"sevkiyat","title":"Depo ve sevkiyat hazırlığı"}]
   },
   {
     "slug": "anahtar-teslim-tadilat",
@@ -21,7 +23,8 @@ window.demirYapiProjectCategories = [
     "page": "projelerimiz.html?hizmet=anahtar-teslim-tadilat",
     "servicePage": "anahtar-teslim-tadilat.html",
     "image": "assets/detay-anahtar-teslim-tadilat.jpg",
-    "summary": "Daire, ofis ve iş yerlerinde keşiften teslimata komple yenileme işleri."
+    "summary": "Daire, ofis ve iş yerlerinde keşiften teslimata komple yenileme işleri.",
+    "subcategories": [{"slug":"mutfak-yenileme","title":"Mutfak yenileme"},{"slug":"banyo-yenileme","title":"Banyo yenileme"}]
   },
   {
     "slug": "boya-tadilat",
@@ -29,7 +32,8 @@ window.demirYapiProjectCategories = [
     "page": "projelerimiz.html?hizmet=boya-tadilat",
     "servicePage": "boya-tadilat.html",
     "image": "assets/mutfak-tadilat.jpg",
-    "summary": "Boya, alçı, parke, mutfak, banyo ve iç mekan yenileme uygulamaları."
+    "summary": "Boya, alçı, parke, mutfak, banyo ve iç mekan yenileme uygulamaları.",
+    "subcategories": [{"slug":"boya-ic-mekan","title":"Boya ve iç mekân uygulamaları"},{"slug":"zemin-yenileme","title":"Zemin ve boya yenileme"}]
   },
   {
     "slug": "peyzaj-havuz",
@@ -37,7 +41,8 @@ window.demirYapiProjectCategories = [
     "page": "projelerimiz.html?hizmet=peyzaj-havuz",
     "servicePage": "peyzaj-havuz.html",
     "image": "assets/detay-peyzaj-havuz.jpg",
-    "summary": "Bahçe düzenleme, sulama, taş uygulamaları, havuz yapımı ve dış alan çözümleri."
+    "summary": "Bahçe düzenleme, sulama, taş uygulamaları, havuz yapımı ve dış alan çözümleri.",
+    "subcategories": [{"slug":"bahce-peyzaj","title":"Bahçe peyzajı"},{"slug":"havuz-dis-alan","title":"Havuz ve dış alan"}]
   },
   {
     "slug": "villa-tadilati",
@@ -45,7 +50,8 @@ window.demirYapiProjectCategories = [
     "page": "projelerimiz.html?hizmet=villa-tadilati",
     "servicePage": "villa-tadilati.html",
     "image": "assets/detay-villa-tadilati.jpg",
-    "summary": "Villa iç mekan, dış cephe, bahçe, teras ve havuz çevresi yenileme projeleri."
+    "summary": "Villa iç mekan, dış cephe, bahçe, teras ve havuz çevresi yenileme projeleri.",
+    "subcategories": [{"slug":"villa-ic-mekan","title":"Villa iç mekân yenileme"},{"slug":"dis-cephe-teras","title":"Dış cephe ve teras"}]
   },
   {
     "slug": "hafriyat",
@@ -53,7 +59,8 @@ window.demirYapiProjectCategories = [
     "page": "projelerimiz.html?hizmet=hafriyat",
     "servicePage": "hafriyat.html",
     "image": "assets/detay-hafriyat-moloz.jpg",
-    "summary": "Temel kazısı, dolgu, tesviye, saha hazırlığı, moloz kaldırma ve kamyon organizasyonu."
+    "summary": "Temel kazısı, dolgu, tesviye, saha hazırlığı, moloz kaldırma ve kamyon organizasyonu.",
+    "subcategories": [{"slug":"temel-kazi","title":"Temel kazısı ve saha hazırlığı"},{"slug":"saha-tesviye","title":"Saha tesviyesi ve taşıma"}]
   }
 ];
 
@@ -62,6 +69,7 @@ window.demirYapiProjects = [
     "slug": "konut-santiye-hazirligi",
     "title": "Konut Şantiye Hazırlığı",
     "serviceSlug": "insaat-muteahhitlik",
+    "subcategorySlug": "santiye-hazirligi",
     "category": "İnşaat Müteahhitlik",
     "location": "İstanbul",
     "date": "2026",
@@ -78,6 +86,7 @@ window.demirYapiProjects = [
     "slug": "proje-bazli-malzeme-tedarigi",
     "title": "Proje Bazlı Malzeme Tedariği",
     "serviceSlug": "insaat-malzemeleri",
+    "subcategorySlug": "proje-tedarik",
     "category": "İnşaat Malzemeleri",
     "location": "Maltepe / İstanbul",
     "date": "2026",
@@ -94,6 +103,7 @@ window.demirYapiProjects = [
     "slug": "anahtar-teslim-daire-yenileme",
     "title": "Anahtar Teslim Daire Yenileme",
     "serviceSlug": "anahtar-teslim-tadilat",
+    "subcategorySlug": "mutfak-yenileme",
     "category": "Anahtar Teslim Tadilat",
     "location": "İstanbul",
     "date": "2026",
@@ -110,6 +120,7 @@ window.demirYapiProjects = [
     "slug": "boya-ve-ic-mekan-tadilati",
     "title": "Boya ve İç Mekan Tadilatı",
     "serviceSlug": "boya-tadilat",
+    "subcategorySlug": "boya-ic-mekan",
     "category": "Boya ve Tadilat",
     "location": "İstanbul",
     "date": "2026",
@@ -126,6 +137,7 @@ window.demirYapiProjects = [
     "slug": "bahce-peyzaj-uygulamasi",
     "title": "Bahçe Peyzaj Uygulaması",
     "serviceSlug": "peyzaj-havuz",
+    "subcategorySlug": "bahce-peyzaj",
     "category": "Peyzaj ve Havuz",
     "location": "İstanbul",
     "date": "2026",
@@ -142,6 +154,7 @@ window.demirYapiProjects = [
     "slug": "havuz-ve-dis-alan-hazirligi",
     "title": "Havuz ve Dış Alan Hazırlığı",
     "serviceSlug": "peyzaj-havuz",
+    "subcategorySlug": "havuz-dis-alan",
     "category": "Peyzaj ve Havuz",
     "location": "İstanbul",
     "date": "2026",
@@ -158,6 +171,7 @@ window.demirYapiProjects = [
     "slug": "villa-yenileme-projesi",
     "title": "Villa Yenileme Projesi",
     "serviceSlug": "villa-tadilati",
+    "subcategorySlug": "villa-ic-mekan",
     "category": "Villa Tadilatı",
     "location": "İstanbul",
     "date": "2026",
@@ -174,6 +188,7 @@ window.demirYapiProjects = [
     "slug": "hafriyat-ve-saha-hazirligi",
     "title": "Hafriyat ve Saha Hazırlığı",
     "serviceSlug": "hafriyat",
+    "subcategorySlug": "temel-kazi",
     "category": "Hafriyat",
     "location": "İstanbul",
     "date": "2026",
@@ -190,6 +205,7 @@ window.demirYapiProjects = [
     "slug": "konut-dis-cephe-uygulamasi",
     "title": "Konut Dış Cephe Uygulaması",
     "serviceSlug": "insaat-muteahhitlik",
+    "subcategorySlug": "dis-cephe",
     "category": "İnşaat Müteahhitlik",
     "location": "İstanbul",
     "image": "assets/proje-insaat-konut-cephe.jpg",
@@ -202,6 +218,7 @@ window.demirYapiProjects = [
     "slug": "yapi-malzemesi-sevkiyat-hazirligi",
     "title": "Yapı Malzemesi Sevkiyat Hazırlığı",
     "serviceSlug": "insaat-malzemeleri",
+    "subcategorySlug": "sevkiyat",
     "category": "İnşaat Malzemeleri",
     "location": "İstanbul",
     "image": "assets/proje-malzeme-teslim.jpg",
@@ -214,6 +231,7 @@ window.demirYapiProjects = [
     "slug": "anahtar-teslim-banyo-yenileme",
     "title": "Anahtar Teslim Banyo Yenileme",
     "serviceSlug": "anahtar-teslim-tadilat",
+    "subcategorySlug": "banyo-yenileme",
     "category": "Anahtar Teslim Tadilat",
     "location": "İstanbul",
     "image": "assets/proje-anahtar-teslim-banyo.jpg",
@@ -226,6 +244,7 @@ window.demirYapiProjects = [
     "slug": "daire-zemin-ve-boya-yenileme",
     "title": "Daire Zemin ve Boya Yenileme",
     "serviceSlug": "boya-tadilat",
+    "subcategorySlug": "zemin-yenileme",
     "category": "Boya ve Tadilat",
     "location": "İstanbul",
     "image": "assets/proje-boya-daire.jpg",
@@ -238,6 +257,7 @@ window.demirYapiProjects = [
     "slug": "villa-dis-cephe-ve-teras-yenileme",
     "title": "Villa Dış Cephe ve Teras Yenileme",
     "serviceSlug": "villa-tadilati",
+    "subcategorySlug": "dis-cephe-teras",
     "category": "Villa Tadilatı",
     "location": "İstanbul",
     "image": "assets/proje-villa-dis-cephe.jpg",
@@ -250,6 +270,7 @@ window.demirYapiProjects = [
     "slug": "hafriyat-saha-duzenleme",
     "title": "Hafriyat ve Saha Düzenleme",
     "serviceSlug": "hafriyat",
+    "subcategorySlug": "saha-tesviye",
     "category": "Hafriyat",
     "location": "İstanbul",
     "image": "assets/proje-hafriyat-saha.jpg",
