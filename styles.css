@@ -1450,6 +1450,20 @@ h3 {
   margin: 0 0 20px;
 }
 
+.project-service-tiles { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 18px; margin: 0 0 18px; }
+.project-service-tile { position: relative; display: flex; min-height: 260px; overflow: hidden; align-items: flex-end; color: var(--white); background: var(--charcoal); border: 1px solid var(--line); border-radius: 9px; box-shadow: 0 14px 32px rgba(16,17,18,.1); isolation: isolate; }
+.project-service-tile > img { position: absolute; inset: 0; z-index: -2; width: 100%; height: 100%; object-fit: cover; transition: transform 220ms ease; }
+.project-service-tile-shade { position: absolute; inset: 0; z-index: -1; background: linear-gradient(180deg, rgba(16,17,18,.08) 8%, rgba(16,17,18,.88) 100%); }
+.project-service-tile-copy { display: grid; gap: 8px; width: 100%; padding: 20px; }
+.project-service-tile-number { color: var(--gold-soft); font-size: .78rem; font-weight: 900; letter-spacing: .06em; }
+.project-service-tile-copy strong { font-size: 1.25rem; line-height: 1.15; }
+.project-service-tile-copy > span:not(.project-service-tile-number) { color: rgba(255,255,255,.82); font-size: .9rem; line-height: 1.4; }
+.project-service-tile-copy .project-service-tile-action { margin-top: 4px; color: var(--gold-soft); font-weight: 800; }
+.project-service-tile:hover > img,.project-service-tile:focus-visible > img { transform: scale(1.05); }
+.project-service-tile:focus-visible { outline: 3px solid var(--gold); outline-offset: 3px; }
+.project-service-tile.active { box-shadow: 0 0 0 3px var(--gold), 0 14px 32px rgba(16,17,18,.16); }
+.project-service-prompt { padding: 12px 0; text-align: left; }
+
 .project-filter {
   display: inline-flex;
   align-items: center;
@@ -1534,6 +1548,8 @@ h3 {
   .visual-grid {
     grid-template-columns: repeat(2, minmax(220px, 1fr));
   }
+
+  .project-service-tiles { grid-template-columns: repeat(3, minmax(0, 1fr)); }
 }
 
 @media (max-width: 860px) {
@@ -1647,6 +1663,7 @@ h3 {
   }
 
   .services-grid,
+  .project-service-tiles,
   .image-card-grid,
   .why-grid,
   .related-service-grid,
@@ -1757,6 +1774,8 @@ h3 {
     grid-template-columns: 1fr 1fr;
     padding: 24px 20px 96px;
   }
+
+  .project-service-tile { min-height: 230px; }
 }
 
 @media (max-width: 520px) {
@@ -1852,6 +1871,12 @@ h3 {
   .site-footer {
     grid-template-columns: 1fr;
   }
+
+  .project-service-tiles { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; }
+  .project-service-tile { min-height: 210px; }
+  .project-service-tile-copy { padding: 14px; }
+  .project-service-tile-copy strong { font-size: 1rem; }
+  .project-service-tile-copy > span:not(.project-service-tile-number) { font-size: .8rem; }
 
   .footer-bottom {
     flex-direction: column;
