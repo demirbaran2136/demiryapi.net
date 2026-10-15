@@ -38,9 +38,7 @@
     hero.querySelector("p:last-child").textContent = selected.summary;
   }
   if (sectionTitle) {
-    sectionTitle.textContent = selected
-      ? `${selected.title} alt kategorilerine göre projeler`
-      : "Yedi hizmet alanı ve alt kategorilerine göre projeler";
+    sectionTitle.textContent = "Uygulama Alanları";
   }
 
   count.textContent = selected
@@ -59,12 +57,12 @@
     if (!categoryProjects.length) return "";
 
     const sectionId = `service-${category.slug}`;
-    const subcategoryNav = grouped.length > 1
-      ? `<nav class="project-subcategory-nav" aria-label="${esc(category.title)} alt kategorileri">${grouped.map((subcategory) => `<a href="#subcategory-${category.slug}-${subcategory.slug}">${esc(subcategory.title)}</a>`).join("")}</nav>`
+    const tabList = grouped.length > 1
+      ? `<div class="project-subcategory-tabs" role="tablist" aria-label="${esc(category.title)} uygulama alanları">${grouped.map((subcategory, index) => { const tabId = `tab-${category.slug}-${subcategory.slug}`; const panelId = `subcategory-${category.slug}-${subcategory.slug}`; return `<button class="project-subcategory-tab${index === 0 ? " active" : ""}" type="button" role="tab" id="${tabId}" aria-controls="${panelId}" aria-selected="${index === 0}" tabindex="${index === 0 ? "0" : "-1"}" data-project-tab>${esc(subcategory.title)}</button>`; }).join("")}</div>`
       : "";
-    const groups = grouped.map((subcategory) => `
-      <section class="project-subcategory" id="subcategory-${category.slug}-${subcategory.slug}">
-        <h4>${esc(subcategory.title)}</h4>
+    const groups = grouped.map((subcategory, index) => `
+      <section class="project-subcategory${grouped.length > 1 ? " project-subcategory-panel" : ""}" id="subcategory-${category.slug}-${subcategory.slug}"${grouped.length > 1 ? ` role="tabpanel" aria-labelledby="tab-${category.slug}-${subcategory.slug}"${index === 0 ? "" : " hidden"}` : ""}>
+        ${grouped.length > 1 ? "" : `<h4>${esc(subcategory.title)}</h4>`}
         <div class="project-grid visual-grid">${subcategory.projects.map(renderCard).join("")}</div>
       </section>`).join("");
 
@@ -75,8 +73,34 @@
           <div><h3 id="${sectionId}-title">${esc(category.title)}</h3><p>${esc(category.summary)}</p></div>
           <a class="button dark" href="${esc(category.servicePage)}">Hizmet detayına git</a>
         </div>
-        ${subcategoryNav}
+        ${tabList}
         ${groups}
       </section>`;
   }).join("") || `<div class="project-empty"><h3>Bu hizmet alanında henüz proje örneği bulunmuyor.</h3><p>Hizmetin kapsamını inceleyebilir veya projeniz için bizimle iletişime geçebilirsiniz.</p><div class="project-empty-actions"><a class="button dark" href="${esc(selected ? selected.servicePage : "hizmetlerimiz.html")}">Hizmet detayına git</a><a class="button primary" href="teklif-al.html">Teklif al</a></div></div>`;
+
+  list.addEventListener("click", (event) => {
+    const tab = event.target.closest("[data-project-tab]");
+    if (!tab) return;
+    const tabList = tab.closest('[role="tablist"]');
+    const panelId = tab.getAttribute("aria-controls");
+    const panel = document.getElementById(panelId);
+    tabList.querySelectorAll('[role="tab"]').forEach((item) => {
+      const isActive = item === tab;
+      item.setAttribute("aria-selected", String(isActive));
+      item.tabIndex = isActive ? 0 : -1;
+      item.classList.toggle("active", isActive);
+    });
+    tabList.parentElement.querySelectorAll('[role="tabpanel"]').forEach((item) => { item.hidden = item !== panel; });
+  });
+
+  list.addEventListener("keydown", (event) => {
+    const tab = event.target.closest('[role="tab"]');
+    if (!tab || !["ArrowLeft", "ArrowRight", "Home", "End"].includes(event.key)) return;
+    const tabs = [...tab.closest('[role="tablist"]').querySelectorAll('[role="tab"]')];
+    const currentIndex = tabs.indexOf(tab);
+    const nextIndex = event.key === "Home" ? 0 : event.key === "End" ? tabs.length - 1 : (currentIndex + (event.key === "ArrowRight" ? 1 : tabs.length - 1)) % tabs.length;
+    event.preventDefault();
+    tabs[nextIndex].focus();
+    tabs[nextIndex].click();
+  });
 })();
