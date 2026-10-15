@@ -19,7 +19,7 @@
     <meta name="twitter:description" content="İstanbul merkezli inşaat taahhüt, yapı malzemeleri, tadilat, boya, peyzaj, havuz ve hafriyat çözümleri.">
     <meta name="twitter:image" content="https://demiryapi.net/assets/services-showcase.jpg">
     <link rel="icon" href="assets/demir-yapi-logo.jpeg">
-    <link rel="preload" as="image" href="assets/services-showcase.jpg">
+    <link rel="preload" as="image" href="assets/optimized/services-showcase-960.webp" imagesrcset="assets/optimized/services-showcase-960.webp 960w, assets/optimized/services-showcase-1536.webp 1536w" imagesizes="100vw" type="image/webp" fetchpriority="high">
     <link rel="stylesheet" href="styles.css">
     <script type="application/ld+json">
       {
@@ -44,7 +44,10 @@
   <body>
     <header class="site-header">
       <a class="brand" href="index.html" aria-label="Demir Yapı ana sayfa">
-        <img src="assets/demir-yapi-logo.jpeg" alt="Demir Yapı logosu">
+        <picture>
+          <source type="image/webp" srcset="assets/optimized/demir-yapi-logo-128.webp 128w" sizes="64px">
+          <img src="assets/demir-yapi-logo.jpeg" alt="Demir Yapı logosu">
+        </picture>
         <span>Demir Yapı</span>
       </a>
       <nav class="nav" aria-label="Ana menü">
@@ -61,7 +64,10 @@
     <main>
       <section class="hero">
         <div class="hero-media">
-          <img src="assets/services-showcase.jpg" alt="Demir Yapı inşaat, tadilat, peyzaj ve hafriyat hizmetleri" width="1536" height="1024">
+          <picture>
+            <source type="image/webp" srcset="assets/optimized/services-showcase-960.webp 960w, assets/optimized/services-showcase-1536.webp 1536w" sizes="100vw">
+            <img src="assets/services-showcase.jpg" alt="Demir Yapı inşaat, tadilat, peyzaj ve hafriyat hizmetleri" width="1536" height="1024" fetchpriority="high">
+          </picture>
         </div>
         <div class="hero-content">
           <p class="eyebrow">Maltepe / İstanbul</p>
@@ -85,31 +91,52 @@
         </div>
         <div class="image-card-grid">
           <a class="image-card" href="insaat-muteahhitlik.html">
-            <img src="assets/detay-insaat-santiye.jpg" alt="İnşaat müteahhitlik şantiye görseli" loading="lazy">
+            <picture>
+              <source type="image/webp" srcset="assets/optimized/detay-insaat-santiye-480.webp 480w, assets/optimized/detay-insaat-santiye-960.webp 960w" sizes="(min-width: 1200px) 32vw, (min-width: 700px) 50vw, 100vw">
+              <img src="assets/detay-insaat-santiye.jpg" alt="İnşaat müteahhitlik şantiye görseli" loading="lazy">
+            </picture>
             <h3>İnşaat Müteahhitlik</h3>
           </a>
           <a class="image-card" href="insaat-malzemeleri.html">
-            <img src="assets/detay-yapi-malzemeleri-depo.jpg" alt="İnşaat malzemeleri depo ve ürün görseli" loading="lazy">
+            <picture>
+              <source type="image/webp" srcset="assets/optimized/detay-yapi-malzemeleri-depo-480.webp 480w, assets/optimized/detay-yapi-malzemeleri-depo-960.webp 960w" sizes="(min-width: 1200px) 32vw, (min-width: 700px) 50vw, 100vw">
+              <img src="assets/detay-yapi-malzemeleri-depo.jpg" alt="İnşaat malzemeleri depo ve ürün görseli" loading="lazy">
+            </picture>
             <h3>İnşaat Malzemeleri</h3>
           </a>
           <a class="image-card" href="anahtar-teslim-tadilat.html">
-            <img src="assets/detay-anahtar-teslim-tadilat.jpg" alt="Anahtar teslim tadilat uygulaması" loading="lazy">
+            <picture>
+              <source type="image/webp" srcset="assets/optimized/detay-anahtar-teslim-tadilat-480.webp 480w, assets/optimized/detay-anahtar-teslim-tadilat-960.webp 960w" sizes="(min-width: 1200px) 32vw, (min-width: 700px) 50vw, 100vw">
+              <img src="assets/detay-anahtar-teslim-tadilat.jpg" alt="Anahtar teslim tadilat uygulaması" loading="lazy">
+            </picture>
             <h3>Anahtar Teslim Tadilat</h3>
           </a>
           <a class="image-card" href="boya-tadilat.html">
-            <img src="assets/mutfak-tadilat.jpg" alt="Boya ve tadilat uygulaması" loading="lazy">
+            <picture>
+              <source type="image/webp" srcset="assets/optimized/mutfak-tadilat-480.webp 480w, assets/optimized/mutfak-tadilat-960.webp 960w" sizes="(min-width: 1200px) 32vw, (min-width: 700px) 50vw, 100vw">
+              <img src="assets/mutfak-tadilat.jpg" alt="Boya ve tadilat uygulaması" loading="lazy">
+            </picture>
             <h3>Boya ve Tadilat</h3>
           </a>
           <a class="image-card" href="hafriyat.html">
-            <img src="assets/detay-hafriyat-moloz.jpg" alt="Hafriyat ve temel hazırlığı" loading="lazy">
+            <picture>
+              <source type="image/webp" srcset="assets/optimized/detay-hafriyat-moloz-480.webp 480w, assets/optimized/detay-hafriyat-moloz-960.webp 960w" sizes="(min-width: 1200px) 32vw, (min-width: 700px) 50vw, 100vw">
+              <img src="assets/detay-hafriyat-moloz.jpg" alt="Hafriyat ve temel hazırlığı" loading="lazy">
+            </picture>
             <h3>Hafriyat</h3>
           </a>
           <a class="image-card" href="peyzaj-havuz.html">
-            <img src="assets/detay-peyzaj-havuz.jpg" alt="Bahçe peyzaj uygulaması" loading="lazy">
+            <picture>
+              <source type="image/webp" srcset="assets/optimized/detay-peyzaj-havuz-480.webp 480w, assets/optimized/detay-peyzaj-havuz-960.webp 960w" sizes="(min-width: 1200px) 32vw, (min-width: 700px) 50vw, 100vw">
+              <img src="assets/detay-peyzaj-havuz.jpg" alt="Bahçe peyzaj uygulaması" loading="lazy">
+            </picture>
             <h3>Peyzaj</h3>
           </a>
           <a class="image-card" href="peyzaj-havuz.html">
-            <img src="assets/havuz-insaat.jpg" alt="Havuz inşaatı ve peyzaj uygulaması" loading="lazy">
+            <picture>
+              <source type="image/webp" srcset="assets/optimized/havuz-insaat-480.webp 480w, assets/optimized/havuz-insaat-960.webp 960w" sizes="(min-width: 1200px) 32vw, (min-width: 700px) 50vw, 100vw">
+              <img src="assets/havuz-insaat.jpg" alt="Havuz inşaatı ve peyzaj uygulaması" loading="lazy">
+            </picture>
             <h3>Havuz</h3>
           </a>
         </div>
@@ -155,7 +182,10 @@
 
     <footer class="site-footer">
       <div class="footer-brand">
-        <img src="assets/demir-yapi-logo.jpeg" alt="Demir Yapı logosu">
+        <picture>
+          <source type="image/webp" srcset="assets/optimized/demir-yapi-logo-128.webp 128w" sizes="64px">
+          <img src="assets/demir-yapi-logo.jpeg" alt="Demir Yapı logosu">
+        </picture>
         <div>
           <strong>Demir Yapı</strong>
           <p>İnşaat, tadilat, hafriyat, peyzaj ve havuz çözümleri.</p>

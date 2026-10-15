@@ -2,12 +2,13 @@
   --ink: #101112;
   --charcoal: #1d2023;
   --stone: #ece8de;
-  --muted: #6d6a62;
+  --muted: #66635b;
   --gold: #c79a3f;
   --gold-soft: #f0d089;
+  --gold-contrast: #705114;
   --paper: #f8f6f0;
   --white: #ffffff;
-  --green: #20b15a;
+  --green: #1d7540;
   --line: rgba(16, 17, 18, 0.14);
   --shadow: 0 22px 60px rgba(0, 0, 0, 0.18);
 }
@@ -162,6 +163,11 @@ img {
   font-size: 0.82rem;
   font-weight: 800;
   text-transform: uppercase;
+}
+
+.services-section .eyebrow,
+.why-section .eyebrow {
+  color: var(--gold-contrast);
 }
 
 h1,
