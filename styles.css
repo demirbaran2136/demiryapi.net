@@ -1913,3 +1913,28 @@ h3 {
   .project-service-heading .button { justify-self: start; }
   .project-subcategory-grid { grid-template-columns: 1fr; }
 }
+
+
+/* Hizmete göre blog rehberleri */
+.blog-service-tiles { margin: 0 0 22px; }
+.blog-service-tiles[hidden], .blog-grid[hidden] { display: none !important; }
+.blog-service-hint { color: var(--muted); margin: 0 0 26px; }
+.blog-selected-heading { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 8px 24px; align-items: center; margin: 8px 0 22px; }
+.blog-selected-heading .eyebrow { grid-column: 1 / -1; margin: 0; }
+.blog-selected-heading > p:not(.eyebrow) { margin: 0; color: var(--muted); }
+.blog-faq-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }
+.blog-faq-item { align-self: start; padding: 18px 20px; border: 1px solid var(--line); border-radius: 10px; background: var(--white); }
+.blog-faq-item summary { cursor: pointer; font-weight: 800; line-height: 1.45; }
+.blog-faq-item summary::marker { color: var(--gold); }
+.blog-faq-item p { margin: 12px 0 0; color: var(--muted); line-height: 1.65; }
+.blog-related { display: flex; flex-wrap: wrap; align-items: center; gap: 12px 20px; margin: 28px 0 12px; padding: 22px; border-radius: 10px; background: var(--paper); }
+.blog-related h3 { width: 100%; margin: 0; }
+.blog-related-link { color: var(--ink); font-weight: 800; text-decoration: none; }
+.blog-related-link:hover, .blog-related-link:focus-visible { color: var(--gold); }
+.blog-related .button { margin-left: auto; }
+@media (max-width: 760px) {
+  .blog-faq-grid { grid-template-columns: 1fr; }
+  .blog-selected-heading { grid-template-columns: 1fr; }
+  .blog-selected-heading .eyebrow { grid-column: auto; }
+  .blog-related .button { margin-left: 0; }
+}
