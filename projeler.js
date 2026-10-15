@@ -23,11 +23,16 @@
       </a>`;
   }
 
-  filters.innerHTML = `<a class="project-filter${active ? "" : " active"}" href="projelerimiz.html"${active ? "" : ' aria-current="page"'}>Tüm Hizmetler</a>` + categories.map((category) =>
-    `<a class="project-filter${active === category.slug ? " active" : ""}" href="projelerimiz.html?hizmet=${encodeURIComponent(category.slug)}"${active === category.slug ? ' aria-current="page"' : ""}>${esc(category.title)}</a>`
+  filters.classList.add("project-service-tiles");
+  filters.setAttribute("aria-label", "Projeleri hizmet alanına göre seçin");
+  filters.hidden = Boolean(active);
+  filters.innerHTML = categories.map((category, index) =>
+    `<a class="project-service-tile${active === category.slug ? " active" : ""}" href="projelerimiz.html?hizmet=${encodeURIComponent(category.slug)}" target="_blank" rel="noopener"${active === category.slug ? ' aria-current="page"' : ""}>` +
+      `<img src="${esc(category.image)}" alt="" loading="lazy"><span class="project-service-tile-shade"></span>` +
+      `<span class="project-service-tile-copy"><span class="project-service-tile-number">HİZMET ${String(index + 1).padStart(2, "0")}</span><strong>${esc(category.title)}</strong><span>${esc(category.summary)}</span><span class="project-service-tile-action">Projeleri görüntüle →</span></span></a>`
   ).join("");
 
-  const shownCategories = categories.filter((category) => !active || category.slug === active);
+  const shownCategories = active ? categories.filter((category) => category.slug === active) : [];
   const visibleProjects = projects.filter((project) => !active || project.serviceSlug === active);
   const selected = categories.find((category) => category.slug === active);
   const hero = document.querySelector(".page-hero");
@@ -43,7 +48,7 @@
 
   count.textContent = selected
     ? `${visibleProjects.length} proje · ${selected.title}`
-    : `${visibleProjects.length} proje · ${shownCategories.length} hizmet alanı`;
+    : `${categories.length} hizmet alanı · projeler yeni sekmede açılır`;
 
   list.innerHTML = shownCategories.map((category) => {
     const categoryProjects = visibleProjects.filter((project) => project.serviceSlug === category.slug);
@@ -76,7 +81,7 @@
         ${tabList}
         ${groups}
       </section>`;
-  }).join("") || `<div class="project-empty"><h3>Bu hizmet alanında henüz proje örneği bulunmuyor.</h3><p>Hizmetin kapsamını inceleyebilir veya projeniz için bizimle iletişime geçebilirsiniz.</p><div class="project-empty-actions"><a class="button dark" href="${esc(selected ? selected.servicePage : "hizmetlerimiz.html")}">Hizmet detayına git</a><a class="button primary" href="teklif-al.html">Teklif al</a></div></div>`;
+  }).join("") || (selected ? `<div class="project-empty"><h3>Bu hizmet alanında henüz proje örneği bulunmuyor.</h3><p>Hizmetin kapsamını inceleyebilir veya projeniz için bizimle iletişime geçebilirsiniz.</p><div class="project-empty-actions"><a class="button dark" href="${esc(selected.servicePage)}">Hizmet detayına git</a><a class="button primary" href="teklif-al.html">Teklif al</a></div></div>` : `<div class="project-empty project-service-prompt"><p>İlgili projeleri görmek için yukarıdaki hizmet kutularından birini seçin.</p></div>`);
 
   list.addEventListener("click", (event) => {
     const tab = event.target.closest("[data-project-tab]");
