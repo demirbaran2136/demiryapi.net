@@ -1902,11 +1902,14 @@ h3 {
 .project-subcategory-tab.active { color: var(--ink); border-bottom-color: var(--gold); }
 .project-subcategory { margin: 0 0 32px; scroll-margin-top: 20px; }
 .project-subcategory[hidden] { display: none; }
-.project-subcategory-panel .project-grid { grid-template-columns: repeat(auto-fill, minmax(min(100%, 320px), 1fr)); }
+.project-subcategory-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 22px; align-items: start; }
+.project-subcategory-grid .project-grid { grid-template-columns: minmax(0, 1fr); }
+.project-subcategory-grid .project-card { height: 100%; }
 .project-subcategory h4 { margin: 0 0 14px; font-size: 1.35rem; }
 .project-service-heading h3 { margin: 0 0 8px; font-size: clamp(1.5rem, 2.4vw, 2rem); }
 .project-card-copy h5 { margin: 0; font-size: 1.15rem; line-height: 1.3; }
 @media (max-width: 760px) {
   .project-service-heading { grid-template-columns: 1fr; gap: 10px; }
   .project-service-heading .button { justify-self: start; }
+  .project-subcategory-grid { grid-template-columns: 1fr; }
 }
