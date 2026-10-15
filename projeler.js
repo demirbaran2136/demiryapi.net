@@ -26,6 +26,7 @@
   filters.classList.add("project-service-tiles");
   filters.setAttribute("aria-label", "Projeleri hizmet alanına göre seçin");
   filters.hidden = Boolean(active);
+  filters.style.display = active ? "none" : "grid";
   filters.innerHTML = categories.map((category, index) =>
     `<a class="project-service-tile${active === category.slug ? " active" : ""}" href="projelerimiz.html?hizmet=${encodeURIComponent(category.slug)}" target="_blank" rel="noopener"${active === category.slug ? ' aria-current="page"' : ""}>` +
       `<img src="${esc(category.image)}" alt="" loading="lazy"><span class="project-service-tile-shade"></span>` +
