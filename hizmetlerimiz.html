@@ -131,6 +131,15 @@
       <div class="footer-bottom"><span>© 2026 Demir Yapı</span><a href="https://demiryapi.net">demiryapi.net</a></div>
     </footer>
     <script>
+      document.querySelectorAll(".service-detail[id]").forEach((card) => {
+        const actions = card.querySelector(".service-actions");
+        if (!actions) return;
+        const projectsLink = document.createElement("a");
+        projectsLink.className = "button dark";
+        projectsLink.href = `projelerimiz.html?hizmet=${encodeURIComponent(card.id)}`;
+        projectsLink.textContent = "Bu Hizmetteki Projeler";
+        actions.append(projectsLink);
+      });
       document.querySelectorAll(".clickable-service").forEach((card) => {
         card.addEventListener("click", (event) => {
           if (event.target.closest("a")) return;

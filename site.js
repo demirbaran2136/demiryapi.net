@@ -109,7 +109,7 @@
 
       if (!eventName) return;
 
-      if (!isQuotePage && href.includes("teklif-al.html")) {
+      if (!isQuotePage && href.includes("teklif-al.html") && link.dataset.directForm !== "true") {
         event.preventDefault();
         window.open(quoteWhatsappUrl, "_blank", "noopener");
       }
