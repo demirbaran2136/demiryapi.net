@@ -7,7 +7,7 @@
 
   const guides = {
     "insaat-muteahhitlik": {
-      articles: ["blog-istanbul-tadilat-firmasi.html"],
+      articles: ["blog-santiye-hazirligi.html", "blog-insaat-is-programi.html"],
       questions: [
         ["İnşaat projesine başlamadan önce hangi hazırlıklar yapılır?", "İhtiyaç programı, arsa veya mevcut yapının durumu, yaklaşık bütçe ve hedef takvim netleştirilir. Ardından keşif ve uygulama kapsamı hazırlanır."],
         ["Kaba inşaat ve ince işler hangi sırayla ilerler?", "Genel olarak temel ve taşıyıcı sistemden sonra duvar, tesisat altyapısı, sıva ve şap; ardından kaplama, boya, doğrama ve son montaj işleri yürütülür. Projeye göre iş sırası değişebilir."],
@@ -40,7 +40,7 @@
       ]
     },
     "boya-tadilat": {
-      articles: ["blog-istanbul-tadilat-firmasi.html"],
+      articles: ["blog-boya-zemin-yenileme.html", "blog-anahtar-teslim-tadilat.html"],
       questions: [
         ["Boya öncesi duvar hazırlığı nasıl yapılır?", "Yüzey temizlenir; kabaran boya, çatlak ve bozuk alanlar uygun şekilde onarılır. Astar ve boya seçimi yüzey durumuna göre belirlenir."],
         ["Boya yapılırken mobilyalar nasıl korunur?", "Mümkünse eşyalar odadan çıkarılır; kalan mobilyalar ve zemin uygulama öncesi örtüyle korunur. Priz ve sabit donanımlar da maskeleme ile güvenceye alınır."],
@@ -51,7 +51,7 @@
       ]
     },
     "peyzaj-havuz": {
-      articles: ["blog-peyzaj-havuz.html"],
+      articles: ["blog-peyzaj-havuz.html", "blog-havuz-yapimi-planlama.html"],
       questions: [
         ["Bahçe peyzajı planlamasına nereden başlanır?", "Kullanım beklentisi, güneş ve gölge durumu, mevcut zemin, drenaj ve bakım için ayrılabilecek zaman değerlendirilir."],
         ["Bahçede drenaj neden önemlidir?", "Doğru drenaj, yağmur ve sulama suyunun kontrollü uzaklaşmasına yardımcı olur; bitkileri ve sert zeminleri su birikmesinden korur."],
@@ -62,7 +62,7 @@
       ]
     },
     "villa-tadilati": {
-      articles: ["blog-villa-tadilati-istanbul.html"],
+      articles: ["blog-villa-tadilati-istanbul.html", "blog-villa-tadilat-is-sirasi.html"],
       questions: [
         ["Villa tadilatı daire tadilatından nasıl farklıdır?", "Villa işlerinde iç mekânın yanında dış cephe, teras, bahçe ve havuz gibi alanlar da kapsama girebilir; bu nedenle koordinasyon ve keşif kapsamı genişler."],
         ["Villa yenileme bütçesini hangi unsurlar etkiler?", "Yenilenecek alanların büyüklüğü, tesisat değişimleri, seçilen malzemeler, özel imalatlar ve dış alan işleri bütçeyi etkiler."],
