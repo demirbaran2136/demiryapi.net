@@ -78,6 +78,6 @@
         </div>
         <div class="project-subcategory-grid">${groups}</div>
       </section>`;
-  }).join("") || (selected ? `<div class="project-empty"><h3>Bu hizmet alanında henüz proje örneği bulunmuyor.</h3><p>Hizmetin kapsamını inceleyebilir veya projeniz için bizimle iletişime geçebilirsiniz.</p><div class="project-empty-actions"><a class="button dark" href="${esc(selected.servicePage)}">Hizmet detayına git</a><a class="button primary" href="teklif-al.html">Teklif al</a></div></div>` : `<div class="project-empty project-service-prompt"><p>İlgili projeleri görmek için yukarıdaki hizmet kutularından birini seçin.</p></div>`);
+  }).join("") || (selected ? `<div class="project-empty"><h3>Bu hizmet alanında henüz proje örneği bulunmuyor.</h3><p>Hizmetin kapsamını inceleyebilir veya projeniz için bizimle iletişime geçebilirsiniz.</p><div class="project-empty-actions"><a class="button dark" href="${esc(selected.servicePage)}">Hizmet detayına git</a><a class="button primary" href="teklif-al.html">Teklif al</a></div></div>` : "");
 
 })();
