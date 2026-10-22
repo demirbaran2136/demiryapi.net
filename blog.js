@@ -3,7 +3,8 @@
   const filters = document.querySelector("[data-blog-services]");
   const content = document.querySelector("[data-blog-content]");
   const articles = document.querySelector("[data-blog-articles]");
-  if (!filters || !content || !articles) return;
+  const count = document.querySelector("[data-blog-count]");
+  if (!filters || !content || !articles || !count) return;
 
   const guides = {
     "insaat-muteahhitlik": {
@@ -99,7 +100,8 @@
     element.setAttribute(attribute, value);
   };
   filters.classList.add("project-service-tiles");
-  filters.innerHTML = categories.map((category, index) => `<a class="project-service-tile${active === category.slug ? " active" : ""}" href="blog.html?hizmet=${encodeURIComponent(category.slug)}"${active === category.slug ? ' aria-current="page"' : ""}><img src="${esc(category.image)}" alt="" loading="lazy" decoding="async"><span class="project-service-tile-shade"></span><span class="project-service-tile-copy"><span class="project-service-tile-number">HİZMET ${String(index + 1).padStart(2, "0")}</span><strong>${esc(category.title)}</strong><span>${esc(category.summary)}</span><span class="project-service-tile-action">Rehber ve soruları görüntüle →</span></span></a>`).join("");
+  filters.setAttribute("aria-label", "Rehberleri hizmet alanına göre seçin");
+  filters.innerHTML = categories.map((category, index) => `<a class="project-service-tile${active === category.slug ? " active" : ""}" href="blog.html?hizmet=${encodeURIComponent(category.slug)}"${active === category.slug ? ' aria-current="page"' : ""}><img src="${esc(category.image)}" alt="" loading="lazy" decoding="async"><span class="project-service-tile-shade"></span><span class="project-service-tile-copy"><span class="project-service-tile-number">HİZMET ${String(index + 1).padStart(2, "0")}</span><strong>${esc(category.title)}</strong><span class="project-service-tile-action">Rehber ve soruları görüntüle →</span></span></a>`).join("");
   const title = document.querySelector(".blog-services-section .section-heading h2");
   if (active) {
     const category = categories.find((item) => item.slug === active);
@@ -126,6 +128,7 @@
       hero.querySelector("p:last-child").textContent = category.summary;
     }
     if (title) title.textContent = `${category.title} rehberi ve sık sorulan sorular`;
+    count.textContent = `${guide.questions.length} açık soru · ${guide.articles.length} rehber yazısı · ${category.title}`;
     filters.hidden = true;
     const articleCards = guide.articles.map((href) => {
       const link = articles.querySelector(`a[href="${href}"]`);
@@ -140,6 +143,7 @@
     document.head.appendChild(schema);
   } else {
     if (title) title.textContent = "İlgilendiğiniz hizmeti seçin";
-    content.innerHTML = `<p class="blog-service-hint">Her hizmet alanında altı soru ve o konuyla ilgili rehber yazıları bulunur.</p>`;
+    count.textContent = `${categories.length} hizmet alanı · rehber ve soruları görüntülemek için bir kutu seçin`;
+    content.innerHTML = "";
   }
 })();
