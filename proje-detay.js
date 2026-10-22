@@ -48,7 +48,7 @@
         <p>${esc(project.summary)}</p><div class="project-detail-meta"><span>${esc(project.location)}</span>${project.date ? `<span>${esc(project.date)}</span>` : ""}</div>
         <div class="project-tags">${tags}</div>
         <a class="button primary" href="${category ? esc(category.servicePage) : "hizmetlerimiz.html"}">Bu hizmet hakkında bilgi</a>
-      </div><img src="${esc(project.image)}" alt="${esc(project.alt || project.title)}">
+      </div><img src="${esc(project.image)}" alt="${esc(project.alt || project.title)}" decoding="async">
     </section>
     <section class="project-detail-body"><p class="eyebrow">Uygulama Özeti</p><h2>Proje kapsamı</h2><p>${esc(project.description || project.summary)}</p>
       <a class="button dark" href="projelerimiz.html?hizmet=${encodeURIComponent(project.serviceSlug)}">${esc(project.category)} projelerinin tümü</a>

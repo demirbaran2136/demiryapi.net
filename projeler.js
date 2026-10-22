@@ -14,7 +14,7 @@
   function renderCard(project) {
     return `
       <a class="project-card photo project-card-link" href="proje-detay.html?proje=${encodeURIComponent(project.slug || "")}">
-        <img src="${esc(project.image)}" alt="${esc(project.alt || project.title)}" loading="lazy">
+        <img src="${esc(project.image)}" alt="${esc(project.alt || project.title)}" loading="lazy" decoding="async">
         <div class="project-card-copy"><span class="project-category">${esc(project.category)}</span>
           <h5>${esc(project.title)}</h5><p>${esc(project.summary)}</p>
           <span class="project-meta">${esc(project.location)}${project.date ? ` · ${esc(project.date)}` : ""}</span>
@@ -29,8 +29,8 @@
   filters.style.display = active ? "none" : "grid";
   filters.innerHTML = categories.map((category, index) =>
     `<a class="project-service-tile${active === category.slug ? " active" : ""}" href="projelerimiz.html?hizmet=${encodeURIComponent(category.slug)}"${active === category.slug ? ' aria-current="page"' : ""}>` +
-      `<img src="${esc(category.image)}" alt="" loading="lazy"><span class="project-service-tile-shade"></span>` +
-      `<span class="project-service-tile-copy"><span class="project-service-tile-number">HİZMET ${String(index + 1).padStart(2, "0")}</span><strong>${esc(category.title)}</strong><span>${esc(category.summary)}</span><span class="project-service-tile-action">Projeleri görüntüle →</span></span></a>`
+      `<img src="${esc(category.image)}" alt="" loading="lazy" decoding="async"><span class="project-service-tile-shade"></span>` +
+      `<span class="project-service-tile-copy"><span class="project-service-tile-number">HİZMET ${String(index + 1).padStart(2, "0")}</span><strong>${esc(category.title)}</strong><span class="project-service-tile-action">Projeleri görüntüle →</span></span></a>`
   ).join("");
 
   const shownCategories = active ? categories.filter((category) => category.slug === active) : [];
