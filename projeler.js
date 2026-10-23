@@ -38,6 +38,43 @@
   const selected = categories.find((category) => category.slug === active);
   const hero = document.querySelector(".page-hero");
   const sectionTitle = document.querySelector(".projects-section .section-heading h2");
+
+  const canonicalUrl = selected
+    ? `https://demiryapi.net/projelerimiz.html?hizmet=${encodeURIComponent(selected.slug)}`
+    : "https://demiryapi.net/projelerimiz.html";
+  const pageTitle = selected
+    ? `${selected.title} Projeleri | Demir Yapı İstanbul`
+    : "İnşaat ve Tadilat Projelerimiz | Demir Yapı İstanbul";
+  const pageDescription = selected
+    ? `İstanbul'da ${selected.title}: ${selected.summary}`
+    : "Demir Yapı projeleri; İstanbul'da inşaat, tadilat, villa yenileme, peyzaj, havuz ve hafriyat alanlarında planlı uygulama örneklerini gösterir.";
+
+  document.title = pageTitle;
+  const canonical = document.querySelector('link[rel="canonical"]');
+  if (canonical) canonical.href = canonicalUrl;
+  const setMetaContent = (selector, value) => {
+    const meta = document.querySelector(selector);
+    if (meta) meta.setAttribute("content", value);
+  };
+  setMetaContent('meta[name="description"]', pageDescription);
+  setMetaContent('meta[property="og:title"]', pageTitle);
+  setMetaContent('meta[property="og:description"]', pageDescription);
+  setMetaContent('meta[property="og:url"]', canonicalUrl);
+  setMetaContent('meta[name="twitter:title"]', pageTitle);
+  setMetaContent('meta[name="twitter:description"]', pageDescription);
+  const structuredData = document.querySelector('script[type="application/ld+json"]');
+  if (structuredData) {
+    try {
+      const pageSchema = JSON.parse(structuredData.textContent);
+      pageSchema.name = selected ? pageTitle : "Demir Yapı Projelerimiz";
+      pageSchema.url = canonicalUrl;
+      pageSchema.description = pageDescription;
+      structuredData.textContent = JSON.stringify(pageSchema);
+    } catch (error) {
+      // Keep the static structured data if it cannot be updated.
+    }
+  }
+
   if (selected && hero) {
     hero.querySelector(".eyebrow").textContent = `${selected.title} Projeleri`;
     hero.querySelector("h1").textContent = `${selected.title} Uygulamaları`;

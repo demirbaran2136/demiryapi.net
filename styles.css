@@ -159,10 +159,20 @@ img {
 
 .eyebrow {
   margin: 0 0 12px;
-  color: var(--gold-soft);
-  font-size: 0.82rem;
+  color: var(--gold-contrast);
+  font-size: 0.88rem;
   font-weight: 800;
+  line-height: 1.35;
+  letter-spacing: 0.02em;
   text-transform: uppercase;
+}
+
+.hero .eyebrow,
+.page-hero .eyebrow,
+.service-page-hero .eyebrow,
+.quote-section:not(.standalone) .eyebrow,
+.project-detail-hero .eyebrow {
+  color: var(--gold-soft);
 }
 
 .services-section .eyebrow,
