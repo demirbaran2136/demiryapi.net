@@ -2021,3 +2021,8 @@ h3 {
   .footer-bottom { min-width: 0; max-width: 100%; flex-wrap: wrap; gap: 12px 18px; }
   .footer-legal-controls { flex-wrap: wrap; justify-content: flex-start; }
 }
+
+
+/* Keep the blog landing page concise while surfacing recent guides. */
+.blog-grid.blog-latest-only .blog-card:not([data-featured="true"]) { display: none; }
+.blog-latest-heading { margin-top: clamp(42px, 6vw, 76px); }

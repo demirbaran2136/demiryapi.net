@@ -2,7 +2,7 @@ window.demirYapiProjectCategories = [
   {
     "slug": "insaat-muteahhitlik",
     "title": "İnşaat Müteahhitlik",
-    "page": "projelerimiz.html?hizmet=insaat-muteahhitlik",
+    "page": "projeler-insaat-muteahhitlik.html",
     "servicePage": "insaat-muteahhitlik.html",
     "image": "assets/detay-insaat-santiye.jpg",
     "summary": "Konut, ticari yapı, kaba inşaat, ince işler ve anahtar teslim proje uygulamaları.",
@@ -11,7 +11,7 @@ window.demirYapiProjectCategories = [
   {
     "slug": "insaat-malzemeleri",
     "title": "İnşaat Malzemeleri",
-    "page": "projelerimiz.html?hizmet=insaat-malzemeleri",
+    "page": "projeler-insaat-malzemeleri.html",
     "servicePage": "insaat-malzemeleri.html",
     "image": "assets/detay-yapi-malzemeleri-depo.jpg",
     "summary": "Çimento, alçı, boya, demir, seramik, izolasyon, hırdavat ve yapı kimyasalları tedariği.",
@@ -20,7 +20,7 @@ window.demirYapiProjectCategories = [
   {
     "slug": "anahtar-teslim-tadilat",
     "title": "Anahtar Teslim Tadilat",
-    "page": "projelerimiz.html?hizmet=anahtar-teslim-tadilat",
+    "page": "projeler-anahtar-teslim-tadilat.html",
     "servicePage": "anahtar-teslim-tadilat.html",
     "image": "assets/detay-anahtar-teslim-tadilat.jpg",
     "summary": "Daire, ofis ve iş yerlerinde keşiften teslimata komple yenileme işleri.",
@@ -29,7 +29,7 @@ window.demirYapiProjectCategories = [
   {
     "slug": "boya-tadilat",
     "title": "Boya ve Tadilat",
-    "page": "projelerimiz.html?hizmet=boya-tadilat",
+    "page": "projeler-boya-tadilat.html",
     "servicePage": "boya-tadilat.html",
     "image": "assets/mutfak-tadilat.jpg",
     "summary": "Boya, alçı, parke, mutfak, banyo ve iç mekan yenileme uygulamaları.",
@@ -38,7 +38,7 @@ window.demirYapiProjectCategories = [
   {
     "slug": "peyzaj-havuz",
     "title": "Peyzaj ve Havuz",
-    "page": "projelerimiz.html?hizmet=peyzaj-havuz",
+    "page": "projeler-peyzaj-havuz.html",
     "servicePage": "peyzaj-havuz.html",
     "image": "assets/detay-peyzaj-havuz.jpg",
     "summary": "Bahçe düzenleme, sulama, taş uygulamaları, havuz yapımı ve dış alan çözümleri.",
@@ -47,7 +47,7 @@ window.demirYapiProjectCategories = [
   {
     "slug": "villa-tadilati",
     "title": "Villa Tadilatı",
-    "page": "projelerimiz.html?hizmet=villa-tadilati",
+    "page": "projeler-villa-tadilati.html",
     "servicePage": "villa-tadilati.html",
     "image": "assets/detay-villa-tadilati.jpg",
     "summary": "Villa iç mekan, dış cephe, bahçe, teras ve havuz çevresi yenileme projeleri.",
@@ -56,7 +56,7 @@ window.demirYapiProjectCategories = [
   {
     "slug": "hafriyat",
     "title": "Hafriyat",
-    "page": "projelerimiz.html?hizmet=hafriyat",
+    "page": "projeler-hafriyat.html",
     "servicePage": "hafriyat.html",
     "image": "assets/detay-hafriyat-moloz.jpg",
     "summary": "Temel kazısı, dolgu, tesviye, saha hazırlığı, moloz kaldırma ve kamyon organizasyonu.",
