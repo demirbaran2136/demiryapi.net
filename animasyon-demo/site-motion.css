@@ -1,0 +1,31 @@
+/* Lightweight, isolated animation layer for the full-site preview. */
+.motion-preview-banner{display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:6px 18px;min-height:38px;padding:7px 16px;color:#241d0d;background:#f0d089;font-size:.82rem;text-align:center}
+.motion-preview-banner>div{display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:5px 12px}
+.motion-preview-banner strong{font-size:.72rem;letter-spacing:.07em}
+.motion-preview-banner a{font-weight:800;text-decoration:underline;text-underline-offset:3px}
+.motion-site-demo .site-header{transition:box-shadow .25s ease,background-color .25s ease}
+.motion-site-demo .nav a,.motion-site-demo .quote-button,.motion-site-demo .button,.motion-preview-banner a{transition:color .2s ease,background-color .2s ease,transform .2s ease,box-shadow .2s ease}
+.motion-site-demo .nav a:hover{transform:translateY(-1px)}
+.motion-site-demo .quote-button:hover,.motion-site-demo .button:hover{transform:translateY(-2px);box-shadow:0 8px 20px rgba(16,17,18,.16)}
+.motion-site-demo .hero-media img,.motion-site-demo .service-page-hero>img{animation:site-motion-settle 1.05s cubic-bezier(.22,.72,.24,1) both}
+@keyframes site-motion-settle{from{transform:scale(1.035)}to{transform:scale(1)}}
+.motion-site-demo .motion-reveal{transition:opacity .52s cubic-bezier(.22,.72,.24,1) var(--motion-delay,0ms),transform .52s cubic-bezier(.22,.72,.24,1) var(--motion-delay,0ms)}
+html.motion-pending .motion-site-demo .motion-reveal:not(.motion-visible){opacity:0;transform:translate3d(0,16px,0)}
+.motion-site-demo .motion-reveal.motion-visible{opacity:1;transform:translate3d(0,0,0)}
+@media (hover:hover){
+ .motion-site-demo .image-card,.motion-site-demo .service-card,.motion-site-demo .project-card-link,.motion-site-demo .blog-card-link,.motion-site-demo .related-service-card,.motion-site-demo .clickable-service,.motion-site-demo .service-gallery figure{transition:transform .28s cubic-bezier(.22,.72,.24,1),box-shadow .28s ease,border-color .28s ease}
+ .motion-site-demo .image-card:hover,.motion-site-demo .service-card:hover,.motion-site-demo .project-card-link:hover,.motion-site-demo .blog-card-link:hover,.motion-site-demo .related-service-card:hover,.motion-site-demo .clickable-service:hover,.motion-site-demo .service-gallery figure:hover{transform:translateY(-3px)}
+ .motion-site-demo .image-card img,.motion-site-demo .project-card img,.motion-site-demo .blog-card img,.motion-site-demo .service-gallery img,.motion-site-demo .service-detail img{transition:transform .45s cubic-bezier(.22,.72,.24,1),opacity .3s ease}
+ .motion-site-demo .image-card:hover img,.motion-site-demo .project-card-link:hover img,.motion-site-demo .blog-card-link:hover img,.motion-site-demo .service-gallery figure:hover img,.motion-site-demo .clickable-service:hover img{transform:scale(1.025)}
+}
+@media (max-width:700px){.motion-preview-banner{font-size:.74rem;gap:4px 12px}.motion-preview-banner>div{gap:3px 8px}html.motion-pending .motion-site-demo .motion-reveal:not(.motion-visible){transform:translate3d(0,12px,0)}}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto!important}.motion-site-demo *,.motion-site-demo *::before,.motion-site-demo *::after{animation-duration:.01ms!important;animation-iteration-count:1!important;scroll-behavior:auto!important;transition-duration:.01ms!important}.motion-site-demo .motion-reveal{opacity:1!important;transform:none!important}}
+
+@media (min-width:1181px){.motion-site-demo #hizmetler .related-service-grid{grid-template-columns:repeat(4,minmax(0,1fr))}}
+
+/* Lazy-loaded contact map; its iframe stays below the fold and does not delay the hero. */
+.motion-site-demo .map-card--embed{display:grid;grid-template-columns:minmax(0,1.45fr) minmax(280px,.75fr);min-height:430px;background:#fff}
+.motion-site-demo .map-card--embed iframe{width:100%;height:100%;min-height:430px;pointer-events:auto;border:0}
+.motion-site-demo .map-card--embed .map-card-copy{min-height:430px;padding:30px;background:linear-gradient(140deg,#f8f6f0,#ece8de)}
+.motion-site-demo .map-directions{display:inline-flex;width:max-content;max-width:100%;margin-top:10px;padding:12px 16px;color:#171717;background:linear-gradient(135deg,#f0d089,#d6a63d);border-radius:6px;font-weight:800}
+@media(max-width:760px){.motion-site-demo .map-card--embed{grid-template-columns:1fr}.motion-site-demo .map-card--embed iframe{height:320px;min-height:320px}.motion-site-demo .map-card--embed .map-card-copy{min-height:0;padding:24px}}
