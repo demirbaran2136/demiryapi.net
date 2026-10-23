@@ -87,7 +87,9 @@
   };
 
   const esc = (value) => String(value || "").replace(/[&<>"']/g, (char) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" })[char]);
-  const requested = new URLSearchParams(window.location.search).get("hizmet") || "";
+  const requestedParam = new URLSearchParams(window.location.search).get("hizmet") || "";
+  const pageService = document.body.dataset.blogService || "";
+  const requested = pageService || requestedParam;
   const active = categories.some((category) => category.slug === requested) ? requested : "";
   const setMeta = (selector, attribute, value) => {
     let element = document.querySelector(selector);
@@ -101,14 +103,15 @@
   };
   filters.classList.add("project-service-tiles");
   filters.setAttribute("aria-label", "Rehberleri hizmet alanına göre seçin");
-  filters.innerHTML = categories.map((category, index) => `<a class="project-service-tile${active === category.slug ? " active" : ""}" href="blog.html?hizmet=${encodeURIComponent(category.slug)}"${active === category.slug ? ' aria-current="page"' : ""}><img src="${esc(category.image)}" alt="" loading="lazy" decoding="async"><span class="project-service-tile-shade"></span><span class="project-service-tile-copy"><span class="project-service-tile-number">HİZMET ${String(index + 1).padStart(2, "0")}</span><strong>${esc(category.title)}</strong><span class="project-service-tile-action">Rehber ve soruları görüntüle →</span></span></a>`).join("");
+  filters.innerHTML = categories.map((category, index) => `<a class="project-service-tile${active === category.slug ? " active" : ""}" href="blog-rehberi-${encodeURIComponent(category.slug)}.html"${active === category.slug ? ' aria-current="page"' : ""}><img src="${esc(category.image)}" alt="" loading="lazy" decoding="async"><span class="project-service-tile-shade"></span><span class="project-service-tile-copy"><span class="project-service-tile-number">HİZMET ${String(index + 1).padStart(2, "0")}</span><strong>${esc(category.title)}</strong><span class="project-service-tile-action">Rehber ve soruları görüntüle →</span></span></a>`).join("");
   const title = document.querySelector(".blog-services-section .section-heading h2");
+  const latestHeading = document.querySelector("[data-blog-latest-heading]");
   if (active) {
     const category = categories.find((item) => item.slug === active);
     const guide = guides[active];
-    const pageTitle = `${category.title} Rehberi ve Sık Sorulan Sorular | Demir Yapı`;
-    const pageDescription = `${category.title}: ${category.summary} Sık sorulan soruların yanıtlarını ve ilgili rehber yazılarını inceleyin.`;
-    const canonicalUrl = `https://demiryapi.net/blog.html?hizmet=${encodeURIComponent(active)}`;
+    const pageTitle = pageService ? category.title + " Rehberi ve SSS | Demir Yapı" : "İnşaat, Tadilat ve Yapı Malzemeleri Blogu | Demir Yapı";
+    const pageDescription = pageService ? category.title + ": " + category.summary + " Sık sorular ve rehberler." : "Demir Yapı blogunda İstanbul\u0027da tadilat, hafriyat, peyzaj, havuz, yapı malzemeleri ve inşaat süreçleri hakkında pratik bilgiler bulunur."; 
+    const canonicalUrl = pageService ? "https://demiryapi.net/blog-rehberi-" + encodeURIComponent(active) + ".html" : "https://demiryapi.net/blog.html";
     document.title = pageTitle;
     setMeta('meta[name="description"]', "content", pageDescription);
     setMeta('meta[property="og:title"]', "content", pageTitle);
@@ -130,20 +133,28 @@
     if (title) title.textContent = `${category.title} rehberi ve sık sorulan sorular`;
     count.textContent = `${guide.questions.length} açık soru · ${guide.articles.length} rehber yazısı · ${category.title}`;
     filters.hidden = true;
+    if (latestHeading) latestHeading.hidden = true;
     const articleCards = guide.articles.map((href) => {
       const link = articles.querySelector(`a[href="${href}"]`);
       return link ? `<a class="blog-related-link" href="${esc(href)}">${link.querySelector("h3")?.textContent || "İlgili rehberi oku"} →</a>` : "";
     }).join("");
     content.innerHTML = `<div class="blog-selected-heading"><p class="eyebrow">${esc(category.title)}</p><p>${esc(category.summary)}</p><a class="button secondary" href="blog.html">← Tüm hizmet alanları</a></div><div class="blog-faq-grid">${guide.questions.map(([question, answer]) => `<details class="blog-faq-item" open><summary>${esc(question)}</summary><p>${esc(answer)}</p></details>`).join("")}</div><div class="blog-related"><h3>İlgili yazılar</h3>${articleCards || '<p>Bu hizmet için yeni rehber yazıları hazırlanıyor.</p>'}<a class="button primary" href="teklif-al.html">Hizmet için teklif al</a></div>`;
     articles.hidden = true;
+    articles.classList.remove("blog-latest-only");
     const faqSchema = { "@context": "https://schema.org", "@type": "FAQPage", "mainEntity": guide.questions.map(([question, answer]) => ({ "@type": "Question", "name": question, "acceptedAnswer": { "@type": "Answer", "text": answer } })) };
-    const schema = document.createElement("script");
-    schema.type = "application/ld+json";
-    schema.textContent = JSON.stringify(faqSchema);
-    document.head.appendChild(schema);
+    if (pageService) {
+      const schema = document.createElement("script");
+      schema.type = "application/ld+json";
+      schema.textContent = JSON.stringify(faqSchema);
+      document.head.appendChild(schema);
+    }
   } else {
     if (title) title.textContent = "İlgilendiğiniz hizmeti seçin";
-    count.textContent = `${categories.length} hizmet alanı · rehber ve soruları görüntülemek için bir kutu seçin`;
+    count.textContent = categories.length + " hizmet alanı · öne çıkan 5 rehber yazısı";
     content.innerHTML = "";
+    articles.hidden = false;
+    articles.classList.add("blog-latest-only");
+    if (latestHeading) latestHeading.hidden = false;
+
   }
 })();
