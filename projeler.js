@@ -8,16 +8,18 @@
 
   const params = new URLSearchParams(window.location.search);
   const requestedService = params.get("hizmet") || "";
-  const active = categories.some((category) => category.slug === requestedService) ? requestedService : "";
+  const pageService = document.body.dataset.projectService || "";
+  const requested = pageService || requestedService;
+  const active = categories.some((category) => category.slug === requested) ? requested : "";
   const esc = (value) => String(value || "").replace(/[&<>"']/g, (char) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" })[char]);
 
   function renderCard(project) {
     return `
-      <a class="project-card photo project-card-link" href="proje-detay.html?proje=${encodeURIComponent(project.slug || "")}">
-        <img src="${esc(project.image)}" alt="${esc(project.alt || project.title)}" loading="lazy" decoding="async">
+      <a class="project-card photo project-card-link" href="${esc(project.page || ("proje-" + (project.slug || "") + ".html"))}">
+        <img src="${esc(project.image)}" alt="${esc(project.alt || project.title)}" width="960" height="640" loading="lazy" decoding="async">
         <div class="project-card-copy"><span class="project-category">${esc(project.category)}</span>
           <h5>${esc(project.title)}</h5><p>${esc(project.summary)}</p>
-          <span class="project-meta">${esc(project.location)}${project.date ? ` · ${esc(project.date)}` : ""}</span>
+          <span class="project-meta">${project.isRepresentative ? "Temsili proje akışı" : `${esc(project.location)}${project.date ? ` · ${esc(project.date)}` : ""}`}</span>
           <span class="project-more">Proje detayını görüntüle →</span>
         </div>
       </a>`;
@@ -28,8 +30,8 @@
   filters.hidden = Boolean(active);
   filters.style.display = active ? "none" : "grid";
   filters.innerHTML = categories.map((category, index) =>
-    `<a class="project-service-tile${active === category.slug ? " active" : ""}" href="projelerimiz.html?hizmet=${encodeURIComponent(category.slug)}"${active === category.slug ? ' aria-current="page"' : ""}>` +
-      `<img src="${esc(category.image)}" alt="" loading="lazy" decoding="async"><span class="project-service-tile-shade"></span>` +
+    `<a class="project-service-tile${active === category.slug ? " active" : ""}" href="${esc(category.page || ("projeler-" + category.slug + ".html"))}"${active === category.slug ? ' aria-current="page"' : ""}>` +
+      `<img src="${esc(category.image)}" alt="" width="960" height="640" loading="lazy" decoding="async"><span class="project-service-tile-shade"></span>` +
       `<span class="project-service-tile-copy"><span class="project-service-tile-number">HİZMET ${String(index + 1).padStart(2, "0")}</span><strong>${esc(category.title)}</strong><span class="project-service-tile-action">Projeleri görüntüle →</span></span></a>`
   ).join("");
 
@@ -39,16 +41,15 @@
   const hero = document.querySelector(".page-hero");
   const sectionTitle = document.querySelector(".projects-section .section-heading h2");
 
-  const canonicalUrl = selected
-    ? `https://demiryapi.net/projelerimiz.html?hizmet=${encodeURIComponent(selected.slug)}`
+  const canonicalUrl = selected && pageService
+    ? "https://demiryapi.net/projeler-" + encodeURIComponent(selected.slug) + ".html"
     : "https://demiryapi.net/projelerimiz.html";
-  const pageTitle = selected
-    ? `${selected.title} Projeleri | Demir Yapı İstanbul`
+  const pageTitle = selected && pageService
+    ? selected.title + " Projeleri | Demir Yapı İstanbul"
     : "İnşaat ve Tadilat Projelerimiz | Demir Yapı İstanbul";
-  const pageDescription = selected
-    ? `İstanbul'da ${selected.title}: ${selected.summary}`
-    : "Demir Yapı projeleri; İstanbul'da inşaat, tadilat, villa yenileme, peyzaj, havuz ve hafriyat alanlarında planlı uygulama örneklerini gösterir.";
-
+  const pageDescription = selected && pageService
+    ? "İstanbul\u0027da " + selected.title + ": " + selected.summary
+    : "Demir Yapı projeleri; İstanbul\u0027da inşaat, tadilat, villa yenileme, peyzaj, havuz ve hafriyat alanlarında planlı uygulama örneklerini gösterir.";
   document.title = pageTitle;
   const canonical = document.querySelector('link[rel="canonical"]');
   if (canonical) canonical.href = canonicalUrl;
@@ -66,9 +67,9 @@
   if (structuredData) {
     try {
       const pageSchema = JSON.parse(structuredData.textContent);
-      pageSchema.name = selected ? pageTitle : "Demir Yapı Projelerimiz";
+      pageSchema.name = selected && pageService ? pageTitle : "Demir Yapı Projelerimiz";
       pageSchema.url = canonicalUrl;
-      pageSchema.description = pageDescription;
+      pageSchema.description = selected && pageService ? pageDescription : "Demir Yapı\u0027nın inşaat, tadilat, villa yenileme, peyzaj, havuz ve hafriyat uygulama örnekleri.";
       structuredData.textContent = JSON.stringify(pageSchema);
     } catch (error) {
       // Keep the static structured data if it cannot be updated.
@@ -85,7 +86,7 @@
   }
 
   count.textContent = selected
-    ? `${visibleProjects.length} proje · ${selected.title}`
+    ? `${visibleProjects.length} temsili proje akışı · ${selected.title}`
     : `${categories.length} hizmet alanı · projeleri görüntülemek için bir kutu seçin`;
 
   list.innerHTML = shownCategories.map((category) => {

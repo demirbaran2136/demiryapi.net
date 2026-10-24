@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://demiryapi.net/</loc>
@@ -8,7 +8,7 @@
   </url>
   <url>
     <loc>https://demiryapi.net/hizmetlerimiz.html</loc>
-    <lastmod>2026-08-10</lastmod>
+    <lastmod>2026-10-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
@@ -68,55 +68,13 @@
   </url>
   <url>
     <loc>https://demiryapi.net/projelerimiz.html</loc>
-    <lastmod>2026-10-23</lastmod>
+    <lastmod>2026-10-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://demiryapi.net/projelerimiz.html?hizmet=insaat-muteahhitlik</loc>
-    <lastmod>2026-10-23</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://demiryapi.net/projelerimiz.html?hizmet=insaat-malzemeleri</loc>
-    <lastmod>2026-10-23</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://demiryapi.net/projelerimiz.html?hizmet=anahtar-teslim-tadilat</loc>
-    <lastmod>2026-10-23</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://demiryapi.net/projelerimiz.html?hizmet=boya-tadilat</loc>
-    <lastmod>2026-10-23</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://demiryapi.net/projelerimiz.html?hizmet=peyzaj-havuz</loc>
-    <lastmod>2026-10-23</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://demiryapi.net/projelerimiz.html?hizmet=villa-tadilati</loc>
-    <lastmod>2026-10-23</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://demiryapi.net/projelerimiz.html?hizmet=hafriyat</loc>
-    <lastmod>2026-10-23</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
     <loc>https://demiryapi.net/blog.html</loc>
-    <lastmod>2026-10-22</lastmod>
+    <lastmod>2026-10-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -193,132 +151,6 @@
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://demiryapi.net/blog.html?hizmet=insaat-muteahhitlik</loc>
-    <lastmod>2026-10-22</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://demiryapi.net/blog.html?hizmet=insaat-malzemeleri</loc>
-    <lastmod>2026-10-22</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://demiryapi.net/blog.html?hizmet=anahtar-teslim-tadilat</loc>
-    <lastmod>2026-10-22</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://demiryapi.net/blog.html?hizmet=boya-tadilat</loc>
-    <lastmod>2026-10-22</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://demiryapi.net/blog.html?hizmet=peyzaj-havuz</loc>
-    <lastmod>2026-10-22</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://demiryapi.net/blog.html?hizmet=villa-tadilati</loc>
-    <lastmod>2026-10-22</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://demiryapi.net/blog.html?hizmet=hafriyat</loc>
-    <lastmod>2026-10-22</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://demiryapi.net/proje-detay.html?proje=konut-santiye-hazirligi</loc>
-    <lastmod>2026-10-15</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://demiryapi.net/proje-detay.html?proje=proje-bazli-malzeme-tedarigi</loc>
-    <lastmod>2026-10-15</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://demiryapi.net/proje-detay.html?proje=anahtar-teslim-daire-yenileme</loc>
-    <lastmod>2026-10-15</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://demiryapi.net/proje-detay.html?proje=boya-ve-ic-mekan-tadilati</loc>
-    <lastmod>2026-10-15</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://demiryapi.net/proje-detay.html?proje=bahce-peyzaj-uygulamasi</loc>
-    <lastmod>2026-10-15</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://demiryapi.net/proje-detay.html?proje=havuz-ve-dis-alan-hazirligi</loc>
-    <lastmod>2026-10-15</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://demiryapi.net/proje-detay.html?proje=villa-yenileme-projesi</loc>
-    <lastmod>2026-10-15</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://demiryapi.net/proje-detay.html?proje=hafriyat-ve-saha-hazirligi</loc>
-    <lastmod>2026-10-15</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://demiryapi.net/proje-detay.html?proje=konut-dis-cephe-uygulamasi</loc>
-    <lastmod>2026-10-15</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://demiryapi.net/proje-detay.html?proje=yapi-malzemesi-sevkiyat-hazirligi</loc>
-    <lastmod>2026-10-15</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://demiryapi.net/proje-detay.html?proje=anahtar-teslim-banyo-yenileme</loc>
-    <lastmod>2026-10-15</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://demiryapi.net/proje-detay.html?proje=daire-zemin-ve-boya-yenileme</loc>
-    <lastmod>2026-10-15</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://demiryapi.net/proje-detay.html?proje=villa-dis-cephe-ve-teras-yenileme</loc>
-    <lastmod>2026-10-15</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://demiryapi.net/proje-detay.html?proje=hafriyat-saha-duzenleme</loc>
-    <lastmod>2026-10-15</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
     <loc>https://demiryapi.net/blog-santiye-hazirligi.html</loc>
     <lastmod>2026-10-16</lastmod>
     <changefreq>monthly</changefreq>
@@ -348,7 +180,172 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
+  <url>
+    <loc>https://demiryapi.net/projeler-insaat-muteahhitlik.html</loc>
+    <lastmod>2026-10-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://demiryapi.net/blog-rehberi-insaat-muteahhitlik.html</loc>
+    <lastmod>2026-10-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://demiryapi.net/projeler-insaat-malzemeleri.html</loc>
+    <lastmod>2026-10-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://demiryapi.net/blog-rehberi-insaat-malzemeleri.html</loc>
+    <lastmod>2026-10-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://demiryapi.net/projeler-anahtar-teslim-tadilat.html</loc>
+    <lastmod>2026-10-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://demiryapi.net/blog-rehberi-anahtar-teslim-tadilat.html</loc>
+    <lastmod>2026-10-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://demiryapi.net/projeler-boya-tadilat.html</loc>
+    <lastmod>2026-10-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://demiryapi.net/blog-rehberi-boya-tadilat.html</loc>
+    <lastmod>2026-10-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://demiryapi.net/projeler-peyzaj-havuz.html</loc>
+    <lastmod>2026-10-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://demiryapi.net/blog-rehberi-peyzaj-havuz.html</loc>
+    <lastmod>2026-10-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://demiryapi.net/projeler-villa-tadilati.html</loc>
+    <lastmod>2026-10-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://demiryapi.net/blog-rehberi-villa-tadilati.html</loc>
+    <lastmod>2026-10-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://demiryapi.net/projeler-hafriyat.html</loc>
+    <lastmod>2026-10-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://demiryapi.net/blog-rehberi-hafriyat.html</loc>
+    <lastmod>2026-10-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+    <url>
+    <loc>https://demiryapi.net/proje-konut-santiye-hazirligi.html</loc>
+    <lastmod>2026-10-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+    <url>
+    <loc>https://demiryapi.net/proje-proje-bazli-malzeme-tedarigi.html</loc>
+    <lastmod>2026-10-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+    <url>
+    <loc>https://demiryapi.net/proje-anahtar-teslim-daire-yenileme.html</loc>
+    <lastmod>2026-10-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+    <url>
+    <loc>https://demiryapi.net/proje-boya-ve-ic-mekan-tadilati.html</loc>
+    <lastmod>2026-10-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+    <url>
+    <loc>https://demiryapi.net/proje-bahce-peyzaj-uygulamasi.html</loc>
+    <lastmod>2026-10-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+    <url>
+    <loc>https://demiryapi.net/proje-havuz-ve-dis-alan-hazirligi.html</loc>
+    <lastmod>2026-10-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+    <url>
+    <loc>https://demiryapi.net/proje-villa-yenileme-projesi.html</loc>
+    <lastmod>2026-10-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+    <url>
+    <loc>https://demiryapi.net/proje-hafriyat-ve-saha-hazirligi.html</loc>
+    <lastmod>2026-10-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+    <url>
+    <loc>https://demiryapi.net/proje-konut-dis-cephe-uygulamasi.html</loc>
+    <lastmod>2026-10-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+    <url>
+    <loc>https://demiryapi.net/proje-yapi-malzemesi-sevkiyat-hazirligi.html</loc>
+    <lastmod>2026-10-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+    <url>
+    <loc>https://demiryapi.net/proje-anahtar-teslim-banyo-yenileme.html</loc>
+    <lastmod>2026-10-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+    <url>
+    <loc>https://demiryapi.net/proje-daire-zemin-ve-boya-yenileme.html</loc>
+    <lastmod>2026-10-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+    <url>
+    <loc>https://demiryapi.net/proje-villa-dis-cephe-ve-teras-yenileme.html</loc>
+    <lastmod>2026-10-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+    <url>
+    <loc>https://demiryapi.net/proje-hafriyat-saha-duzenleme.html</loc>
+    <lastmod>2026-10-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
 </urlset>
-
-
-
